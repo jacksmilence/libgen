@@ -8,9 +8,9 @@ from libgen.utils import redirect_to_login, redirect_to_404, redirect_to_index
 def get_context(context):
     # 需要用户登录
     context.no_cache = is_no_cache
-    user = frappe.session.user
-    if user == "Guest":
-        redirect_to_login()
+    # user = frappe.session.user
+    # if user == "Guest":
+    #     redirect_to_login()
 
     # 获取搜索结果
     try:
