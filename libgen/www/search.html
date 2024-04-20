@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0082)https://libgen.re/search.php?req=led&open=0&res=25&view=simple&phrase=1&column=def -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="robots" content="noindex,nofollow">
+    <meta name="description"
+          content="Library Genesis is a community for downloading free books and articles with a simple structure and extremely fast experience.">
+    <title>Library Genesis</title>
+    <link rel="stylesheet" href="/assets/libgen/css/menu.css" type="text/css" media="screen">
+    <style type="text/css">
+        .c { font-family: Georgia, 'Times New Roman', Times, serif; font-size: 11px; color: #000000; letter-spacing: 0px; }
+        A { text-decoration: none; }
+        TD { padding: 1px; }
+        TABLE { border-spacing: 1px 1px; }
+    </style>
+    <!--[if IE 6]>
+    <style>
+        body {behavior: url('/csshover3.htc');}
+        #menu li .drop {background:url('/img/drop.gif') no-repeat right 8px;
+    </style>
+    <![endif]-->
+</head>
+<body>
+
+<table width="100%" border="0">
+    <tbody>
+    <tr>
+        <td>
+            <form name="libgen" action="/search"><br>
+                <input autofocus="autofocus" name="req" id="searchform" size="60" maxlength="80" value="{{ req }}">
+                <input type="submit" value="Search!"><br>
+                <label><b>Results per page</b></label>
+                <select name="res" size="1">
+                    {% if res == 25 %}
+                    <option value="25" selected="selected">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    {% elif res == 50 %}
+                    <option value="25">25</option>
+                    <option value="50" selected="selected">50</option>
+                    <option value="100">100</option>
+                    {% elif res == 100 %}
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100" selected="selected">100</option>
+                    {% else %}
+                    <option value="25">25</option>
+                    <option value="50" selected="selected">50</option>
+                    <option value="100">100</option>
+                    {% endif %}
+                </select>
+                <br>
+
+                <font><b>Search in fields</b></font>
+                {% if column == "title" %}
+                <input type="radio" name="column" value="title" checked>Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "author" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author" checked>Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "series" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series" checked>Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "publisher" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher" checked>Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "year" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year" checked>Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "identifier" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier" checked>ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "language" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language" checked>Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "md5" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5" checked>MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% elif column == "tags" %}
+                <input type="radio" name="column" value="title">Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags" checked>Tags
+                {% else %}
+                <input type="radio" name="column" value="title" checked>Title
+                <input type="radio" name="column" value="author">Author(s)
+                <input type="radio" name="column" value="series">Series
+                <input type="radio" name="column" value="publisher">Publisher
+                <input type="radio" name="column" value="year">Year
+                <input type="radio" name="column" value="identifier">ISBN
+                <input type="radio" name="column" value="language">Language
+                <input type="radio" name="column" value="md5">MD5
+                <input type="radio" name="column" value="tags">Tags
+                {% endif %}
+
+
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<table width="100%">
+    <tbody>
+    <tr>
+        <td align="left" width="45%"><font color="grey" size="1">{{ count.count }} files found | showing results from {{
+            (pagination - 1)*res + 1}} to
+            {% if pagination * res > count.count %}
+            {{ count.count }}
+            {% else %}
+            {{ pagination * res }}
+            {% endif %}
+        </font>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="page">
+    {% set page_num = pagination %}
+    {% set total_pages = total_page_number %}
+    {% set surrounding_pages = 12 %}
+
+    <!-- Display previous page link -->
+    {% if page_num > 1 %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page_num - 1 }}">Previous</a>
+    {% endif %}
+
+    <!-- Display current page and surrounding pages -->
+    {% for page in range(1, total_pages + 1) %}
+    {% if page == page_num %}
+    <span class="current">{{ page }}</span>
+    {% elif page > page_num - surrounding_pages and page < page_num + surrounding_pages %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+
+    <!-- Display next page link -->
+    {% if page_num < total_pages %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page_num + 1 }}">Next</a>
+    {% endif %}
+</div>
+
+
+<table width="100%" cellspacing="1" cellpadding="1" rules="rows" class="c" align="center">
+    <tbody>
+    <tr valign="top" bgcolor="#C0C0C0">
+        <td><b>ID</b>
+        </td>
+        <td><b>Author(s)</b>
+        </td>
+        <td><b>Title</b>
+        </td>
+        <td><b>Publisher</b>
+        </td>
+        <td><b>Year</b>
+        </td>
+        <td><b>Pages</b>
+        </td>
+        <td><b>Language</b>
+        </td>
+        <td><b>Size</b>
+        </td>
+        <td><b>Extension</b></td>
+    </tr>
+    {% for result in results %}
+    <tr valign="top" bgcolor="#C6DEFF">
+        <td>{{ result.ID }}</td>
+        <td>{{ result.Author }}</td>
+        <td width="500"><a href="/book/{{ result.MD5 }}" title="">{{ result.Title }}<br> <font face="Times"
+                                                                                               color="green"><i>{{
+            result.Identifier }}</i></font></a></td>
+        <td>{{ result.Publisher }}</td>
+        <td nowrap="">{{ result.Year}}</td>
+        <td>{{ result.Pages }}</td>
+        <td>{{ result.Language }}</td>
+        <td nowrap="">{{ format_number(result.Filesize) }} Mb</td>
+        <td nowrap="">{{result.Extension }}</td>
+    </tr>
+    {% endfor %}
+
+
+    </tbody>
+</table>
+
+<div class="page">
+    {% set page_num = pagination %}
+    {% set total_pages = total_page_number %}
+    {% set surrounding_pages = 12 %}
+
+    <!-- Display previous page link -->
+    {% if page_num > 1 %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page_num - 1 }}">Previous</a>
+    {% endif %}
+
+    <!-- Display current page and surrounding pages -->
+    {% for page in range(1, total_pages + 1) %}
+    {% if page == page_num %}
+    <span class="current">{{ page }}</span>
+    {% elif page > page_num - surrounding_pages and page < page_num + surrounding_pages %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+
+    <!-- Display next page link -->
+    {% if page_num < total_pages %}
+    <a href="/search?req={{ req }}&res={{ res }}&column={{ column }}&page={{ page_num + 1 }}">Next</a>
+    {% endif %}
+</div>
+
+
+</body>
+
+</html>

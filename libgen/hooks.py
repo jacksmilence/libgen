@@ -42,7 +42,7 @@ app_license = "agpl-3.0"
 # ----------
 
 # application home page (will override Website Settings)
-# home_page = "login"
+home_page = "index"
 
 # website user home page (by Role)
 # role_home_page = {
@@ -55,14 +55,18 @@ app_license = "agpl-3.0"
 # automatically create page for each record of this doctype
 # website_generators = ["Web Page"]
 
+website_route_rules = [
+    {'from_route': '/book/<url_optimization>', 'to_route': 'detail'}
+]
+
 # Jinja
 # ----------
 
 # add methods and filters to jinja environment
-# jinja = {
-# 	"methods": "libgen.utils.jinja_methods",
-# 	"filters": "libgen.utils.jinja_filters"
-# }
+jinja = {
+	"methods": "libgen.utils.format_number",
+	# "filters": "libgen.utils.jinja_filters"
+}
 
 # Installation
 # ------------
