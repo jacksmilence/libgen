@@ -67,11 +67,11 @@
         <td id="info">
             <div id="download">
                 <h2>
-                    <a href="/files/{{ result.Filename }}" download="{{ result.Title }}.{{ result.Extension}}">Download</a>
+                    <a href="/files/{{ result.Filename | lower() }}" download="{{ result.Title }}.{{ result.Extension}}">Download</a>
                 </h2>
             </div>
             <h1>{{ result.Title }}</h1>
-            <p>location: {{ result.Filename }}</p>
+            <p>location: {{ result.Filename | lower()  }}</p>
             <p>Author(s): {{ result.Author}}</p>
             <p>Publisher: {{ result.Publisher }}</p>
             <p>Year: {{ result.Year }}</p>
